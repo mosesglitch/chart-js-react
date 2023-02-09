@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Data } from "./utils/Data";
 import PieChart from "./components/PieChart";
+import BarChart from "./components/BarChart";
 
 export default function App() {
   const [chartData, setChartData] = useState({
@@ -24,7 +25,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <PieChart chartData={chartData} />
+      {/* <PieChart chartData={chartData} /> */}
+      <BarChart chartData={chartData} />
     </div>
   );
 }
