@@ -1,12 +1,10 @@
-import { Bar } from "react-chartjs-2";
-import { CategoryScale } from "chart.js/auto";
-
-const BarChart = ({ chartData }) => {
-  // Bar.register(CategoryScale);
+import React from "react";
+import { Line } from "react-chartjs-2";
+function LineChart({ chartData }) {
   return (
     <div className="chart-container">
-      <h2 style={{ textAlign: "center" }}>Bar Chart</h2>
-      <Bar
+      <h2 style={{ textAlign: "center" }}>Line Chart</h2>
+      <Line
         data={chartData}
         options={{
           plugins: {
@@ -22,5 +20,5 @@ const BarChart = ({ chartData }) => {
       />
     </div>
   );
-};
-export default BarChart;
+}
+export default LineChart;

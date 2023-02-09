@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Data } from "./utils/Data";
 import PieChart from "./components/PieChart";
 import BarChart from "./components/BarChart";
-
+import LineChart from "./components/LineChart";
 export default function App() {
   const [chartData, setChartData] = useState({
     labels: Data.map((data) => data.year),
@@ -25,8 +25,10 @@ export default function App() {
 
   return (
     <div className="App">
-      {/* <PieChart chartData={chartData} /> */}
+      <PieChart chartData={chartData} />
       <BarChart chartData={chartData} />
+
+      <LineChart chartData={chartData} />
     </div>
   );
 }
